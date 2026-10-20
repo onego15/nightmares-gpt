@@ -1,0 +1,7 @@
+{
+  "name": "the-last-cue",
+  "version": "1.0.0",
+  "private": true,
+  "description": "残響座 — a cinematic theatre escape",
+  "scripts": { "start": "node server.js", "test": "node tests/rules.test.js" }
+}

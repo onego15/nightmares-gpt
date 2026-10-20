@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10191b">
+  <title>残響座 — THE LAST CUE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="world" aria-label="残響座のゲーム画面"></canvas>
+  <div class="grain"></div><div class="vignette"></div>
+  <header id="masthead"><a class="brand" href="./" aria-label="タイトルへ">Z<span>残響座</span></a><div class="edition">AN INTERACTIVE TALE <i></i> EST. 1931</div><button id="sound" title="音の切り替え" aria-label="音の切り替え">SOUND OFF</button></header>
+  <main id="title">
+    <div class="eyebrow"><span></span> A THEATRE THAT FORGOT TO SLEEP</div>
+    <h1>残響座</h1><div class="english">THE LAST CUE</div>
+    <p class="tagline">誰もいない劇場で、<br>最後の拍手が、あなたを待っている。</p>
+    <button class="primary" id="start"><span>幕を開ける</span><span>↗</span></button>
+    <button class="text-button" id="continue" hidden>つづきから <span>→</span></button>
+    <div class="title-meta"><span>01 — 05 ACTS</span><span>HEADPHONES RECOMMENDED</span></div>
+  </main>
+  <div id="title-bottom"><span>光をつなぎ、沈黙の先へ。</span><span>EXPLORATION · PUZZLE · ESCAPE</span><span class="diamond">◇</span></div>
+  <div id="hud" hidden><div id="chapter"><span id="act-number">ACT I</span><strong id="act-name">忘れられた切符</strong></div><div id="objective"></div><div class="hud-actions"><button id="journal-button">手帳 <kbd>J</kbd></button><button id="pause-button" aria-label="一時停止">Ⅱ</button></div><div id="inventory"></div><div id="controls">A D 移動 <b>·</b> W S 奥行き <b>·</b> SHIFT 走る <b>·</b> SPACE 跳ぶ</div><button id="interact" hidden><kbd>E</kbd><span></span></button><div id="subtitle" role="status"></div><div id="save-note"></div></div>
+  <div id="chapter-card" hidden><span></span><h2></h2><p></p></div>
+  <div class="overlay" id="modal" hidden><section class="paper"><div id="modal-kicker" class="eyebrow"></div><h2 id="modal-title"></h2><div id="modal-body"></div><div id="modal-actions"></div><button class="text-button" id="modal-close">戻る <kbd>ESC</kbd></button></section></div>
+  <div class="overlay" id="pause" hidden><section class="paper"><div class="eyebrow">INTERMISSION</div><h2>幕間</h2><p>劇場は、あなたを待っています。</p><button class="primary" id="resume">劇場に戻る <span>→</span></button><button class="text-button" id="motion">カメラの揺れ：あり</button><button class="text-button" id="restart">この幕の入口へ戻る</button><p class="small">進行は自動保存されます。<br>A / D・← / →：移動　W / S：奥行き<br>Shift：走る　Space：跳ぶ　E：調べる<br>J：手帳とヒント　Esc：一時停止　M：音</p></section></div>
+  <div id="ending" hidden><div class="eyebrow">THE HOUSE IS QUIET, AT LAST.</div><h1>終幕</h1><div class="english">THANK YOU FOR STAYING</div><p>拍手は、雨の音に変わった。<br>もう、誰も舞台に残されていない。</p><div class="end-rule"></div><p class="small">残響座 — THE LAST CUE<br>企画・描画・音楽・実装：生成AIとの共同制作<br>あなた：最後の配達人</p><button id="again" class="text-button">もう一度、幕を開ける ↗</button></div>
+  <div id="touch" hidden><button data-key="a" aria-label="左へ">←</button><button data-key="d" aria-label="右へ">→</button><button data-key="Shift" aria-label="走る">走</button><button data-key=" " aria-label="跳ぶ">↑</button></div>
+  <script src="rules.js"></script><script src="game.js"></script>
+</body></html>
